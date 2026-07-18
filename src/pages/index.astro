@@ -1,0 +1,303 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const values = [
+  {
+    name: 'Selflessness',
+    copy: 'We lead with care, helping without making it about ourselves. Your need always comes first in this space.',
+  },
+  {
+    name: 'Love',
+    copy: "We believe in love's power to heal, connect, and uplift. Every interaction in our community is rooted in genuine kindness.",
+  },
+  {
+    name: 'Sensitivity',
+    copy: 'We respond gently, honoring what someone is carrying. Tact and care always come before speed in how we engage.',
+  },
+];
+
+const stats = [
+  { value: '11', label: 'Years of Community' },
+  { value: '10,000+', label: 'Young People Reached' },
+  { value: '10+', label: 'Nigerian States' },
+  { value: '20+', label: 'Offline Meetups' },
+  { value: '50+', label: 'Online Programs' },
+];
+
+const testimonials = [
+  {
+    name: 'Goodnews Ifot',
+    quote:
+      'TSH is not just a community, it is home. It was there for me during some of my hardest moments, reminding me that I was not alone.',
+    image: '/images/Testimonials/Testimonials-Goodnews-Ifot (2).jpg',
+  },
+  {
+    name: 'Ejiro Edwards',
+    quote:
+      'I came in struggling with low self-esteem and depression, but the love here helped rebuild my confidence.',
+    image: '/images/Testimonials/Testimonials-Ejiro-Edwards (6).jpg',
+  },
+  {
+    name: 'Darlington Nze',
+    quote:
+      'Since joining, I have met brilliant minds, discovered amazing talents, and learned to believe in myself again.',
+    image: '/images/Testimonials/Testimonials-Darlington-Nze (1).jpg',
+  },
+  {
+    name: 'Grace Mfon',
+    quote:
+      'Whether online or offline, this community feels like family. A judgment-free home where I have grown in ways I never imagined.',
+    image: '/images/Testimonials/Testimonials-Grace-Mfon (3).jpg',
+  },
+];
+---
+
+<BaseLayout
+  title="Twayne Safe Haven | Youth Mental Health & Wellbeing Community in Nigeria"
+  description="Twayne Safe Haven is a youth mental health and wellbeing community built on storytelling, peer connection, and emotional support for young Nigerians."
+>
+  <!-- Hero — asymmetric, photo bleeds off the right edge, no centered layout -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto grid max-w-wide gap-10 px-6 pb-16 pt-14 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-4 lg:px-10 lg:pb-0 lg:pt-16">
+      <div class="relative z-10 max-w-xl">
+        <p class="text-xs uppercase tracking-[0.16em] text-ember-600">
+          Stories. Support. Community.
+        </p>
+        <h1 class="mt-5 font-display text-[2.75rem] leading-[1.05] tracking-tightest text-ink sm:text-[3.5rem]">
+          Where Every Story <em class="font-normal italic text-ember-600" data-hero-emphasis>Creates Magic</em>
+        </h1>
+        <p class="prose-copy mt-6">
+          Magic begins the moment we feel safe enough to be seen. Twayne Safe Haven is a peer
+          storytelling community that supports the mental health and wellbeing of young
+          Nigerians.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/join-the-community" class="btn-primary">Join the Community</a>
+          <a href="/our-approach" class="btn-secondary">Learn More</a>
+        </div>
+      </div>
+
+      <div class="relative -mx-6 lg:mx-0">
+        <img
+          src="/images/Homepage/TSH-Hero.jpg"
+          alt="Six members of the Twayne Safe Haven community lying in a circle on the grass, heads together, laughing."
+          class="h-[340px] w-full object-cover sm:h-[440px] lg:h-[560px] lg:rounded-l-[2rem]"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are -->
+  <section class="border-t border-ink/10 bg-paper-dim">
+    <div class="mx-auto grid max-w-wide gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-10 lg:py-28">
+      <img
+        src="/images/Homepage/Mission-Vision.jpg"
+        alt="A young man speaking into a microphone during a Twayne Safe Haven community panel, a woman listening beside him."
+        class="w-full rounded-2xl object-cover lg:order-2"
+        loading="lazy"
+      />
+      <div class="lg:order-1">
+        <p class="text-xs uppercase tracking-[0.16em] text-ember-600">Who We Are</p>
+        <h2 class="mt-4 font-display text-3xl leading-[1.15] sm:text-4xl">
+          A youth-led community built on <em class="italic text-haven-400">stories, support, and
+          belonging.</em>
+        </h2>
+        <p class="prose-copy mt-6">
+          Founded in 2015, Twayne Safe Haven creates spaces where young Nigerians can share their
+          stories, feel seen, build real connection, and support their wellbeing together.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="mx-auto max-w-wide px-6 py-20 lg:px-10 lg:py-28">
+    <p class="text-xs uppercase tracking-[0.16em] text-ember-600">Mission and Vision</p>
+    <h2 class="mt-4 max-w-2xl font-display text-3xl leading-[1.15] sm:text-4xl">
+      Built on purpose. <em class="italic text-haven-400">Driven by people.</em>
+    </h2>
+    <p class="prose-copy mt-5 max-w-2xl">
+      We create safe spaces for young Nigerians to share their stories, build real connection,
+      and support their wellbeing together.
+    </p>
+
+    <div class="mt-12 grid gap-8 sm:grid-cols-2">
+      <div class="rounded-2xl border border-ink/10 bg-paper-dim p-8">
+        <p class="text-xs uppercase tracking-[0.14em] text-ember-600">Mission</p>
+        <p class="mt-3 font-display text-xl leading-snug">
+          Improve young people's mental and emotional wellbeing by building safe, inclusive
+          spaces for storytelling and support.
+        </p>
+      </div>
+      <div class="rounded-2xl border border-ink/10 bg-paper-dim p-8">
+        <p class="text-xs uppercase tracking-[0.14em] text-haven-400">Vision</p>
+        <p class="mt-3 font-display text-xl leading-snug">
+          A generation of young people across Nigeria and beyond who are heard, deeply connected,
+          and thriving.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do — editorial flow, not numbered cards -->
+  <section class="border-t border-ink/10 bg-haven-600 text-haven-50">
+    <div class="mx-auto max-w-wide px-6 py-20 lg:px-10 lg:py-28">
+      <p class="text-xs uppercase tracking-[0.16em] text-haven-200">What We Do</p>
+      <h2 class="mt-4 max-w-2xl font-display text-3xl leading-[1.15] text-paper sm:text-4xl">
+        Three ways we <em class="italic text-haven-200">show up.</em>
+      </h2>
+      <p class="mt-5 max-w-xl text-haven-50/80">
+        Everything we do creates conditions for young people to be heard, connected, and
+        supported. Simple, human, and real.
+      </p>
+
+      <div class="mt-14 divide-y divide-haven-50/15 border-t border-haven-50/15">
+        <div class="grid gap-3 py-10 sm:grid-cols-[10rem_1fr] sm:gap-8">
+          <h3 class="font-display text-2xl text-paper">Storytelling</h3>
+          <p class="max-w-2xl text-haven-50/85">
+            We create spaces where young people can speak what they have been carrying. The act
+            of sharing and being witnessed is the first step toward healing. Every story told
+            here matters.
+          </p>
+        </div>
+        <div class="grid gap-3 py-10 sm:grid-cols-[10rem_1fr] sm:gap-8">
+          <h3 class="font-display text-2xl text-paper">Connection</h3>
+          <p class="max-w-2xl text-haven-50/85">
+            We build belonging that crosses states, screens, and backgrounds. Our community
+            brings people together through shared experiences so that no one ever has to face
+            their story alone.
+          </p>
+        </div>
+        <div class="grid gap-3 py-10 sm:grid-cols-[10rem_1fr] sm:gap-8">
+          <h3 class="font-display text-2xl text-paper">Growth</h3>
+          <p class="max-w-2xl text-haven-50/85">
+            We create conditions for confidence, reflection, and becoming. Through programs,
+            peer support, and community, we help young people discover who they are and what
+            they are capable of.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact stats -->
+  <section class="mx-auto max-w-wide px-6 py-20 lg:px-10 lg:py-28">
+    <p class="text-xs uppercase tracking-[0.16em] text-ember-600">Our Impact</p>
+    <h2 class="mt-4 max-w-xl font-display text-3xl leading-[1.15] sm:text-4xl">
+      Eleven years of <em class="italic text-ember-600">showing up.</em>
+    </h2>
+    <dl class="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-5">
+      {stats.map((stat) => (
+        <div>
+          <dt class="sr-only">{stat.label}</dt>
+          <dd class="font-display text-4xl text-ink sm:text-5xl">{stat.value}</dd>
+          <p class="mt-2 text-sm text-ink-soft">{stat.label}</p>
+        </div>
+      ))}
+    </dl>
+  </section>
+
+  <!-- Who is a Twayne -->
+  <section class="border-t border-ink/10 bg-paper-dim">
+    <div class="mx-auto grid max-w-wide gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-10 lg:py-28">
+      <img
+        src="/images/Homepage/Who-is-a-twayne.jpg"
+        alt="A member of the Twayne Safe Haven community"
+        class="w-full rounded-2xl object-cover"
+        loading="lazy"
+      />
+      <div>
+        <p class="text-xs uppercase tracking-[0.16em] text-ember-600">Community Identity</p>
+        <h2 class="mt-4 font-display text-3xl leading-[1.15] sm:text-4xl">
+          Who Is <em class="italic text-haven-400">A Twayne?</em>
+        </h2>
+        <p class="prose-copy mt-6">
+          A Twayne is not just a member. It is a mindset. It is choosing warmth over silence,
+          courage over hiding, and community over isolation.
+        </p>
+        <p class="prose-copy mt-4">
+          Whether you are sharing your truth for the first time or holding space for someone
+          else through theirs, this is your safe haven.
+        </p>
+        <a href="/join-the-community" class="btn-primary mt-8">Become a Twayne</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="mx-auto max-w-wide px-6 py-20 lg:px-10 lg:py-28">
+    <p class="text-xs uppercase tracking-[0.16em] text-ember-600">Our Values</p>
+    <h2 class="mt-4 max-w-xl font-display text-3xl leading-[1.15] sm:text-4xl">
+      The values that shape <em class="italic text-haven-400">how we show up.</em>
+    </h2>
+    <div class="mt-12 grid gap-10 sm:grid-cols-3">
+      {values.map((value) => (
+        <div class="border-t border-ink/15 pt-6">
+          <h3 class="font-display text-xl">{value.name}</h3>
+          <p class="mt-3 text-[0.95rem] leading-relaxed text-ink-soft">{value.copy}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="border-t border-ink/10 bg-haven-600 text-haven-50">
+    <div class="mx-auto max-w-wide px-6 py-20 lg:px-10 lg:py-28">
+      <p class="text-xs uppercase tracking-[0.16em] text-haven-200">Stories from Our Community</p>
+      <h2 class="mt-4 max-w-xl font-display text-3xl leading-[1.15] text-paper sm:text-4xl">
+        Real people. <em class="italic text-haven-200">Real stories.</em>
+      </h2>
+
+      <div class="mt-12 flex snap-x gap-6 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {testimonials.map((t) => (
+          <figure class="w-[280px] shrink-0 snap-start rounded-2xl bg-haven-700 p-6 sm:w-[320px]">
+            <img
+              src={t.image}
+              alt={`Portrait of ${t.name}, a Twayne Safe Haven member`}
+              class="h-14 w-14 rounded-full object-cover"
+              loading="lazy"
+            />
+            <blockquote class="mt-5 text-[0.95rem] leading-relaxed text-haven-50/90">
+              "{t.quote}"
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-haven-200">{t.name}</figcaption>
+          </figure>
+        ))}
+      </div>
+      <p class="mt-2 text-xs text-haven-50/50">Swipe to read more stories</p>
+    </div>
+  </section>
+
+  <!-- Invitation -->
+  <section class="mx-auto max-w-wide px-6 py-24 text-center lg:px-10 lg:py-32">
+    <p class="text-xs uppercase tracking-[0.16em] text-ember-600">An Invitation</p>
+    <h2 class="mx-auto mt-4 max-w-2xl font-display text-3xl leading-[1.15] sm:text-4xl">
+      Come as you are. <em class="italic text-haven-400">We will make space.</em>
+    </h2>
+    <p class="prose-copy mx-auto mt-5 max-w-xl">
+      If you have been looking for a place to feel seen, supported, and understood, this is it.
+      Your voice matters here, even if you are still finding it.
+    </p>
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a href="/join-the-community" class="btn-primary">Join the Community</a>
+      <a href="/about" class="btn-secondary">Explore Our Story</a>
+    </div>
+    <p class="mt-6 text-sm text-ink-soft">Free to join. Safe to be. Always welcome.</p>
+  </section>
+</BaseLayout>
+
+<script>
+  // Signature moment: the italicized word in the hero opens up on load —
+  // a single, slow breath. Everything else on the page stays still.
+  const emphasis = document.querySelector('[data-hero-emphasis]');
+  if (emphasis && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    emphasis.animate(
+      [
+        { letterSpacing: '-0.01em', opacity: 0.75 },
+        { letterSpacing: '0.005em', opacity: 1 },
+      ],
+      { duration: 1400, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'forwards' }
+    );
+  }
+</script>
