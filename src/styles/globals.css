@@ -1,59 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer components {
+  .bleed {
+    @apply relative left-1/2 w-screen -translate-x-1/2;
+  }
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
+    [data-reveal] {
+      opacity: 1;
+      transform: none;
+      transition: none;
     }
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-  }
-
-  body {
-    @apply bg-paper text-ink font-body antialiased;
-    font-feature-settings: 'liga' 1, 'kern' 1;
-  }
-
-  h1, h2, h3, h4 {
-    @apply font-display text-ink;
-    font-weight: 600;
-  }
-
-  ::selection {
-    background: #A8482E;
-    color: #F7F2E9;
-  }
-
-  a:focus-visible,
-  button:focus-visible,
-  input:focus-visible,
-  textarea:focus-visible {
-    outline: 2px solid #A8482E;
-    outline-offset: 3px;
-  }
-}
-
-@layer components {
-  /* Reading-width paragraph used across long-form sections */
-  .prose-copy {
-    @apply max-w-prose text-[1.0625rem] leading-[1.7] text-ink-soft;
-  }
-
-  .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 text-[0.95rem] font-medium text-paper transition-colors duration-200 hover:bg-ember-600;
-  }
-
-  .btn-secondary {
-    @apply inline-flex items-center gap-2 rounded-full border border-ink/25 px-7 py-3.5 text-[0.95rem] font-medium text-ink transition-colors duration-200 hover:border-ink hover:bg-ink hover:text-paper;
   }
 }
