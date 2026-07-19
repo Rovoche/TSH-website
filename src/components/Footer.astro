@@ -6,24 +6,24 @@ const logoPath = path.resolve('./public/images/Logo-Icons/TSH-Icon.svg');
 const logoSvg = fs.readFileSync(logoPath, 'utf-8');
 ---
 
-<footer class="bg-haven-600 text-haven-50">
+<footer class="bg-navy text-paper">
   <div class="mx-auto max-w-wide px-6 py-16 lg:px-10 lg:py-20">
     <div class="grid gap-12 lg:grid-cols-[1.3fr_1fr]">
       <div>
         <div class="flex items-center gap-3">
-          <span class="footer-crest h-11 w-auto text-haven-50" set:html={logoSvg} />
+          <span class="footer-crest h-11 w-auto text-paper" set:html={logoSvg} />
           <div class="font-display text-xl leading-tight text-paper">
             Twayne<br /><span class="font-semibold">Safe Haven</span>
           </div>
         </div>
-        <p class="mt-3 font-display italic text-haven-200">Where every story creates magic.</p>
+        <p class="mt-3 font-display italic text-paper/70">Where every story creates magic.</p>
 
         <div class="mt-10 max-w-sm">
-          <p class="text-xs uppercase tracking-[0.14em] text-haven-200">Heart Notes</p>
+          <p class="text-xs uppercase tracking-[0.14em] text-paper/70">Heart Notes</p>
           <h2 class="mt-2 font-display text-2xl text-paper">
-            Stay close to <span class="italic text-haven-200">the heartbeat.</span>
+            Stay close to <span class="italic text-paper/70">the heartbeat.</span>
           </h2>
-          <p class="mt-3 text-[0.95rem] leading-relaxed text-haven-50/80">
+          <p class="mt-3 text-[0.95rem] leading-relaxed text-paper/70">
             Keep up with our stories, community moments, and quiet reminders that healing,
             belonging, and courage are possible.
           </p>
@@ -34,11 +34,11 @@ const logoSvg = fs.readFileSync(logoPath, 'utf-8');
               type="email"
               required
               placeholder="Email Address"
-              class="w-full rounded-full border border-haven-50/25 bg-transparent px-5 py-3 text-sm text-paper placeholder:text-haven-50/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-haven-200"
+              class="w-full rounded-full border border-paper/25 bg-transparent px-5 py-3 text-sm text-paper placeholder:text-paper/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-flag-blue"
             />
             <button
               type="submit"
-              class="whitespace-nowrap rounded-full bg-paper px-6 py-3 text-sm font-medium text-haven-700 transition-colors hover:bg-haven-200"
+              class="whitespace-nowrap rounded-full bg-paper px-6 py-3 text-sm font-medium text-navy transition-colors hover:bg-flag-blue hover:text-paper"
             >
               Stay Connected
             </button>
@@ -48,7 +48,7 @@ const logoSvg = fs.readFileSync(logoPath, 'utf-8');
 
       <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:justify-items-end lg:text-right">
         <nav aria-label="Explore">
-          <p class="text-xs uppercase tracking-[0.14em] text-haven-200">Explore</p>
+          <p class="text-xs uppercase tracking-[0.14em] text-paper/70">Explore</p>
           <ul class="mt-3 space-y-2 text-[0.95rem]">
             <li><a href="/about" class="hover:text-paper">About Us</a></li>
             <li><a href="/blog" class="hover:text-paper">Stories</a></li>
@@ -56,19 +56,19 @@ const logoSvg = fs.readFileSync(logoPath, 'utf-8');
           </ul>
         </nav>
         <div>
-          <p class="text-xs uppercase tracking-[0.14em] text-haven-200">Connect</p>
+          <p class="text-xs uppercase tracking-[0.14em] text-paper/70">Connect</p>
           <p class="mt-3 text-[0.95rem]">
             <a href="mailto:twaynesafehaven@gmail.com" class="font-medium text-paper hover:underline"
               >Email Us</a
             ><br />
-            <span class="text-haven-50/70">Send a note directly</span>
+            <span class="text-paper/60">Send a note directly</span>
           </p>
           <p class="mt-2 text-[0.95rem]">
             <a href="tel:+2349020336253" class="hover:text-paper">(+234) 902 033 6253</a>
           </p>
         </div>
         <nav aria-label="Legal">
-          <p class="text-xs uppercase tracking-[0.14em] text-haven-200">Legal</p>
+          <p class="text-xs uppercase tracking-[0.14em] text-paper/70">Legal</p>
           <ul class="mt-3 space-y-2 text-[0.95rem]">
             <li><a href="/faqs" class="hover:text-paper">FAQs</a></li>
             <li><a href="/privacy-policy" class="hover:text-paper">Privacy Policy</a></li>
@@ -78,13 +78,13 @@ const logoSvg = fs.readFileSync(logoPath, 'utf-8');
       </div>
     </div>
 
-    <blockquote class="mt-14 max-w-xl border-l border-haven-50/25 pl-5 font-display italic text-haven-50/85">
+    <blockquote class="mt-14 max-w-xl border-l border-paper/25 pl-5 font-display italic text-paper/80">
       "You are allowed to grow slowly. You are allowed to take up space. You are allowed to begin
       again."
     </blockquote>
 
     <div
-      class="mt-12 flex flex-col gap-4 border-t border-haven-50/15 pt-8 text-xs text-haven-50/60 sm:flex-row sm:items-center sm:justify-between"
+      class="mt-12 flex flex-col gap-4 border-t border-paper/15 pt-8 text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between"
     >
       <p>&copy; {new Date().getFullYear()} Twayne Safe Haven. All rights reserved.</p>
       <p>Built on Rock. <a href="https://www.rovoche.com/" class="hover:text-paper">ROVOCHÉ</a></p>
