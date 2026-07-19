@@ -53,7 +53,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     />
   </head>
   <body>
-    <a
+    
       href="#main"
       class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
     >
@@ -64,5 +64,67 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       <slot />
     </main>
     <Footer />
+
+    <script>
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Scroll reveal: fade + rise any [data-reveal] element into view once.
+      const revealTargets = document.querySelectorAll('[data-reveal]');
+      if (reduceMotion) {
+        revealTargets.forEach((el) => el.classList.add('is-visible'));
+      } else if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15, rootMargin: '0px 0px -8% 0px' }
+        );
+        revealTargets.forEach((el, i) => {
+          (el as HTMLElement).style.transitionDelay = `${Math.min(i % 4, 3) * 70}ms`;
+          revealObserver.observe(el);
+        });
+      } else {
+        revealTargets.forEach((el) => el.classList.add('is-visible'));
+      }
+
+      // Count-up: animates a number from 0 to data-count-to once visible.
+      const counters = document.querySelectorAll('[data-count-to]');
+      if (counters.length && 'IntersectionObserver' in window) {
+        const countObserver = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const el = entry.target as HTMLElement;
+              const raw = el.dataset.countTo || '0';
+              const target = parseInt(raw.replace(/[^0-9]/g, ''), 10);
+              const suffix = raw.replace(/[0-9]/g, '');
+              obs.unobserve(el);
+
+              if (reduceMotion || !target) {
+                el.textContent = raw;
+                return;
+              }
+
+              const duration = 1200;
+              const start = performance.now();
+              const tick = (now: number) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(target * eased) + suffix;
+                if (progress < 1) requestAnimationFrame(tick);
+              };
+              requestAnimationFrame(tick);
+            });
+          },
+          { threshold: 0.4 }
+        );
+        counters.forEach((el) => countObserver.observe(el));
+      }
+    </script>
   </body>
 </html>
