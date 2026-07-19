@@ -14,21 +14,19 @@ export default {
           DEFAULT: '#241E19',
           soft: '#4A4038',
         },
-        // Ember — pulled from recurring warm tones in the meetup photography.
-        ember: {
-          50: '#FBEDE7',
-          200: '#E7B8A3',
-          400: '#C97A54',
-          600: '#A8482E',
-          700: '#8A3823',
+        // Deep navy — pulled directly from the crest's flagpole (#042862).
+        // Used for dark sections instead of a flat color wash.
+        navy: {
+          DEFAULT: '#0B2447',
+          deep: '#071A34',
+          mid: '#15355F',
         },
-        // Deep teal-green — second temperature, values/journey sections.
-        haven: {
-          50: '#E8EEEB',
-          200: '#9DBBAE',
-          400: '#3F6E58',
-          600: '#1F3B33',
-          700: '#152A24',
+        // The three colors already living in the TSH flag itself —
+        // used in small, rotating doses as accents, never as a full background.
+        flag: {
+          blue: '#3A6EA5',
+          green: '#5AAD80',
+          red: '#E05555',
         },
       },
       fontFamily: {
